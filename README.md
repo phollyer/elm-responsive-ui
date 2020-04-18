@@ -11,9 +11,9 @@ $ git clone https://github.com/phollyer/elm-responsive-ui.git
 ```
 Then you can either:
 
-    1. Copy the files in `src` to your project, or
-    2. Tell the Elm compiler where to find the files by adding the relative path
-        from your Elm project, to `source-directories` in your `elm.json` file.
+1. Copy the files in `src` to your project, or
+2. Tell the Elm compiler where to find the files by adding the relative path
+    from your Elm project, to `source-directories` in your `elm.json` file.
 
 # Design Goals
 
@@ -28,7 +28,7 @@ CSS in favour of
 [Elm-UI](https://package.elm-lang.org/packages/mdgriffith/elm-ui/latest). As a
 result, I want a pure Elm way of reacting to different size screens and
 orientations, and while requirements may change from project to project, I
-want the process to remain the same. Constantly, re-inventing the wheel isn't
+want the process to remain the same. Constantly re-inventing the wheel isn't
 something that I feel should be necessary for this particular problem.
 
 
