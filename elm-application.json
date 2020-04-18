@@ -1,0 +1,11 @@
+{
+    "name": "phollyer/elm-responsive-ui",
+    "summary": "Responsive UI for https://github.com/mdgriffith/elm-ui",
+    "version": "1.0.0",
+    "exposed-modules": [
+        "ResponsiveUI",
+        "ResponsiveUI.Element",
+        "ResponsiveUI.Element.Border",
+        "ResponsiveUI.Element.Font"
+    ]
+}
