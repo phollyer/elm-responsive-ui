@@ -5,7 +5,7 @@ module ResponsiveUI exposing
     , Msg, update
     , DefaultView(..), Option(..), select
     , Height, Width, aspectRatio
-    , Viewport, viewport, viewportHeight, viewportWidth
+    , Viewport, viewport, height, width
     , device, class, orientation
     , scale, maybeFind, Multiplier, useMultiplier
     )
@@ -109,7 +109,7 @@ will be multiplied by `0.5` when the screen matches that [Option](#Option).
 
 ## Viewport
 
-@docs Viewport, viewport, viewportHeight, viewportWidth
+@docs Viewport, viewport, height, width
 
 ## Device
 
@@ -550,11 +550,11 @@ aspectRatio w h viewport_ =
     let
         currentHeight =
             viewport_
-                |> viewportHeight
+                |> height
 
         currentWidth =
             viewport_
-                |> viewportWidth
+                |> width
     in
     case viewport_ |> device |> .orientation of
         Portrait ->
@@ -632,25 +632,25 @@ classifyDevice viewport_ =
             (Element.classifyDevice
                 { height =
                     viewport_
-                        |> viewportHeight
+                        |> height
                         |> round
                 , width =
                     viewport_
-                        |> viewportWidth
+                        |> width
                         |> round
                 }
             )
 
 
 {-| -}
-viewportHeight : Viewport -> Float
-viewportHeight (Viewport viewport_) =
+height : Viewport -> Float
+height (Viewport viewport_) =
     viewport_.height
 
 
 {-| -}
-viewportWidth : Viewport -> Float
-viewportWidth (Viewport viewport_) =
+width : Viewport -> Float
+width (Viewport viewport_) =
     viewport_.width
 
 
@@ -756,12 +756,12 @@ scale size viewport_ =
                 |> minWidth
 
         current =
-            if (viewport_ |> viewportWidth) >= max_ then
+            if (viewport_ |> width) >= max_ then
                 max_
 
             else
                 viewport_
-                    |> viewportWidth
+                    |> width
     in
     if current <= min_ then
         size
